@@ -55,6 +55,21 @@ header {
     color: #fff;
 }
 
+.anime-card-content .estado-acabada {
+    color: rgb(11, 145, 11);
+}
+.anime-card-content .estado-enproceso {
+    color: rgb(247, 141, 43);
+}
+
+.anime-card-content .estado {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #ccc;
+    padding-top: 1rem;
+    border-top: #222 solid;
+}
+
 .anime-card-content p {
     font-size: 1.25em;
     margin-top: 0;
@@ -64,7 +79,7 @@ header {
 .anime-card .anime-rating {
     font-size: 1.6em;
     font-weight: bold;
-    color: #f8a03c;
+    color: #ab59c4;
     margin-bottom: 1.4rem;
     margin-top: 0.6rem;
 }
