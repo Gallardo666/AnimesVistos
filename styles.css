@@ -11,7 +11,86 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    position: relative; /* Necesario para posicionar el buscador en relación con el header */
 }
+
+.search-container {
+    position: absolute;
+    right: 20px;
+    top: 50%; /* Coloca el contenedor verticalmente en el medio del header */
+    transform: translateY(-50%); /* Ajusta la posición para que esté centrado verticalmente */
+    z-index: 1000; /* Asegura que el menú desplegable esté sobre otros elementos */
+}
+
+.dropdown-button {
+    font-size: 2em; /* Ajusta el tamaño del ícono según tu diseño */
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Añade transición suave para transformaciones y cambios de color */
+}
+
+.dropdown-button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del ícono en un 10% */
+    color: #ab59c4; /* Cambia el color del ícono al pasar el ratón */
+}
+
+.dropdown-content {
+    display: block; /* Mantenemos el contenedor siempre en el flujo del documento para permitir animaciones de transición */
+    position: absolute;
+    top: 60px; /* Ajusta la posición para que el menú se despliegue por debajo del ícono */
+    right: 0;
+    background-color: #444;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    width: 250px; /* Ajusta el ancho del menú */
+    max-height: 0; /* Inicialmente el contenido está oculto */
+    opacity: 0; /* Inicialmente el contenido está oculto */
+    overflow: hidden; /* Asegura que el contenido no desborde el área visible */
+    transition: max-height 0.7s ease-out, opacity 0.7s ease-out; /* Aumenta la duración de la transición */
+}
+
+
+.dropdown-content.show {
+    max-height: 500px; /* Ajusta la altura máxima según el contenido */
+    opacity: 1; /* Haz el contenido completamente opaco cuando se muestra */
+}
+
+.dropdown-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.dropdown-content label {
+    font-size: 1.3em;
+    color: #ccc;
+}
+
+.dropdown-content select {
+    font-size: 0.9em;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+}
+
+.dropdown-content select:focus {
+    outline: none;
+    border-color: #ab59c4;
+}
+
+.dropdown-content option {
+    background-color: #222;
+    color: #fff;
+}
+
 
 .container {
     display: flex;
@@ -82,4 +161,14 @@ header {
     color: #ab59c4;
     margin-bottom: 1.4rem;
     margin-top: 0.6rem;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
