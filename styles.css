@@ -162,6 +162,11 @@ header {
     margin-bottom: 1.4rem;
     margin-top: 0.6rem;
 }
+.anime-card .animeviolento {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #f01313;
+}
 
 .search-container {
     text-align: center;
